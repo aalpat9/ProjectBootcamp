@@ -97,7 +97,8 @@ public class NewAI : MonoBehaviour
 
     private void Die()
     {
-        gameObject.SetActive(false);
+        anim.enabled = false;
+        enabled = false;
     }
 
     private void Attack()

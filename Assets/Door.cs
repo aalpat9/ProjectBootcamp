@@ -29,6 +29,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         this.gameObject.GetComponent<MeshCollider>().enabled = false;
         this.gameObject.transform.DORotate(new Vector3(0, 180, 0), 1);
+        //ses burda oynar
     }
 
 
