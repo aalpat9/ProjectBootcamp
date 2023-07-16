@@ -20513,11 +20513,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 29966c3c0907b49b58c4e59342d020cf, type: 2}
     - target: {fileID: 5753158849961241286, guid: a60240d40e49ac444a18b829f902812e, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5753158849961241286, guid: a60240d40e49ac444a18b829f902812e, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5753158849961241286, guid: a60240d40e49ac444a18b829f902812e, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.r
@@ -20545,7 +20545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5753158849961241286, guid: a60240d40e49ac444a18b829f902812e, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.35606003
+      value: 0.10606003
       objectReference: {fileID: 0}
     - target: {fileID: 6464359054839189273, guid: a60240d40e49ac444a18b829f902812e, type: 3}
       propertyPath: dialogueDisplayDuration

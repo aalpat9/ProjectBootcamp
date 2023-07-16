@@ -135,7 +135,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Position: {r: 0.47975826, g: 0.4809651, b: 29.698046, a: 0}
+    - _Position: {r: 0.5, g: 0.5, b: 30.000004, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _tint: {r: 0.30206928, g: 0.31132078, b: 0.27431473, a: 1}
   m_BuildTextureStacks: []
