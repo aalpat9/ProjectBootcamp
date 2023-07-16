@@ -86,5 +86,70 @@ Takım üyelerinin gelecek sprintlerde daha katılımcı olması gerektiğine di
 
 
 
+# Sprint 2
+Sprint notları: Sprint boyunca yapılan işlerin takibi discord üzerinden gerçekleştirildi. Yaşanan olumlu ve olumsuz durumlar tartışıldı.
 
----
+Sprint içinde tamamlanması tahmin edilen puan: 140 Puan
+
+Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. İkinci sprintte 140 puana ulaşması gerektiğine karar verildi.
+
+Daily Scrum: Daily Scrum toplantılarının Discord üzerinden yapılmasına karar verildi. Daily Scrum toplantısı örneği word dosyası olarak Readme'de bulunmaktadır.[Günlük yapılanların takibi.docx](https://github.com/oguzhandeniz6/bootcamp-u32/files/11931674/Gunluk.yapilanlarin.takibi.docx)
+
+Sprint board update: Sprint board screenshot'ı:
+![kanban](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/6531dbae-761e-4317-8d9a-f2e2861dbe58)
+
+-Oyun Durumu
+![WhatsApp Image 2023-07-03 at 02 42 54](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/1cb0a0dd-f127-41e3-b6c1-172cc7b9b143)
+![WhatsApp Image 2023-07-03 at 02 42 55 (2)](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/2a6590c4-3068-4447-b62a-6bde4e0a556c)
+![WhatsApp Image 2023-07-03 at 02 42 55 (1)](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/5a1e09da-a115-4119-b3ca-248319944b7b)
+![WhatsApp Image 2023-07-03 at 02 42 55](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/697facc5-8e6a-46ca-aea7-222c6220f5f8)
+![WhatsApp Image 2023-07-03 at 02 42 54 (2)](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/d2ce6960-c1df-4e01-810e-6b3aed383561)
+
+![WhatsApp Image 2023-07-03 at 02 42 54 (1)](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/0e891a04-4427-4ba4-8c95-4bf29bcb4ea3)
+
+
+## Sprint Review: 
+Alınan kararlar:Işık sistemi üzerine çalışıldı, enemy ai yapıldı, can arayüzü oluşturuldu, yeni silahlar eklendi, yeni seviyeler oluşturuldu, oyun sesleri sağlandı.
+
+Sprint Review katılımcıları: Arda Alpat, Esra Mermer, Oğuzhan Deniz, Esra Yıldırım, Süleyman Batuhan Şencan
+
+## Sprint Retrospective:
+
+Üçüncü sprintte takım çalışmasının ve iletişimin arttırılmasına karar verildi.
+
+Alınan işlerin iki günlük zaman dilimi içinde bitirilmesi üzerine anlaşıldı. 
+
+# Sprint 3
+Sprint notları: Sprint boyunca yapılan işlerin takibi discord üzerinden gerçekleştirildi. Yaşanan olumlu ve olumsuz durumlar tartışıldı ve planlamalar yapıldı.
+
+Sprint içinde tamamlanması tahmin edilen puan: 80 Puan
+
+Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. Üçüncü sprintte 80 puana ulaşması gerektiğine karar verildi.
+
+Daily Scrum: Daily Scrum toplantılarının Discord üzerinden yapılmasına karar verildi. Daily Scrum toplantısı örneği word dosyası olarak Readme'de bulunmaktadır.
+[Sprint3 .docx](https://github.com/aalpat9/ProjectBootcamp/files/12065048/Sprint3.docx)
+
+
+Sprint board update: Sprint board screenshot'ı:
+![Ekran görüntüsü 2023-07-16](https://github.com/aalpat9/ProjectBootcamp/assets/104733052/d7855cc4-3ba6-4a88-bdbf-3742e4db3047)
+
+
+-Oyun Durumu
+![WhatsApp Image 2023-07-16 at 23 58 14](https://github.com/aalpat9/ProjectBootcamp/assets/104733052/1c4cdfed-aba8-4b15-a9bd-69baf16bdd5a)
+
+![WhatsApp Image 2023-07-16 at 23 58 13](https://github.com/aalpat9/ProjectBootcamp/assets/104733052/4b7ce647-73ed-486d-831d-b08a95e76eaf)
+
+![WhatsApp Image 2023-07-16 at 23 58 11](https://github.com/aalpat9/ProjectBootcamp/assets/104733052/86e28696-6739-4c21-9233-f61800b08618)
+
+## Sprint Review: 
+Alınan kararlar: Enemy ai baştan yapıldı, containerden madde çıkması ayarlandı, yeni seviyeler oluşturuldu, dialoglar eklendi, big boss için seviye ayarlandı.
+
+Sprint Review katılımcıları: Arda Alpat, Esra Mermer,Esra Yıldırım, Süleyman Batuhan Şencan
+
+## Sprint Retrospective:
+
+Son kısımların yardımlaşarak tamamlanması üstüne anlaşıldı.
+
+Güzel bir takım birliği sağlandığı konuşuldu. 
+
+
