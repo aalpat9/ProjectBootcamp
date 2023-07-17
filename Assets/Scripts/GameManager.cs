@@ -54,6 +54,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
 }
 
 

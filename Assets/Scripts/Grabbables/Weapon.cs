@@ -32,13 +32,12 @@ public class Weapon : Grabbable
     {
         if (collision.gameObject.TryGetComponent<IDamagable>(out IDamagable hit))
         {
-            if (hit.Type != IDamagable.DamagableType.ENEMY)
-            {
-                return;
-            }
+            
             hit.Damage();
             LoseDurability(1);
         }
+
+       
 
     }
 

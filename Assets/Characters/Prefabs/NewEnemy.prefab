@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 3078173159452953327}
   - component: {fileID: 683805194664549569}
   - component: {fileID: 628453065933165515}
+  - component: {fileID: 2998754716007607940}
   m_Layer: 0
   m_Name: PT_Spine2
   m_TagString: Untagged
@@ -590,6 +591,23 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2998754716007607940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929339992618959185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff57222a543026419d082c97103b556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  health: 1
+  otherUnits:
+  - {fileID: 333747302491192025}
+  newAI: {fileID: 7825017203814653859}
 --- !u!1 &933469604047522143
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,6 +2595,7 @@ GameObject:
   - component: {fileID: 7830461902504916477}
   - component: {fileID: 2818227590759638052}
   - component: {fileID: 9087237418413592587}
+  - component: {fileID: 333747302491192025}
   m_Layer: 0
   m_Name: PT_Hips
   m_TagString: Untagged
@@ -2654,6 +2673,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &333747302491192025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4433396949184360612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff57222a543026419d082c97103b556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  health: 1
+  otherUnits:
+  - {fileID: 2998754716007607940}
+  newAI: {fileID: 7825017203814653859}
 --- !u!1 &4500742278852503304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3943,10 +3979,8 @@ GameObject:
   - component: {fileID: 3833917644322608407}
   - component: {fileID: 101268890053933741}
   - component: {fileID: 7786122649483222652}
-  - component: {fileID: 5217554101722231994}
   - component: {fileID: 7825017203814653859}
   - component: {fileID: 4793407268042137064}
-  - component: {fileID: 5998376208462763673}
   m_Layer: 0
   m_Name: NewEnemy
   m_TagString: Untagged
@@ -3973,7 +4007,7 @@ Transform:
   - {fileID: 2783185093606135500}
   - {fileID: 7606977666577116551}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: -83.344, z: 0}
 --- !u!95 &101268890053933741
 Animator:
@@ -4018,29 +4052,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
---- !u!136 &5217554101722231994
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7381372432760033390}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.19416046
-  m_Height: 1.7979684
-  m_Direction: 1
-  m_Center: {x: -0.0045910478, y: 0.8867948, z: -0.043216705}
 --- !u!114 &7825017203814653859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4086,21 +4097,6 @@ MonoBehaviour:
   player: {fileID: 0}
   detected: 0
   lastSeenPos: {x: 0, y: 0, z: 0}
---- !u!114 &5998376208462763673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7381372432760033390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff57222a543026419d082c97103b556, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Skeleton
-  health: 1
-  newAI: {fileID: 0}
 --- !u!1 &7551789487317434390
 GameObject:
   m_ObjectHideFlags: 0

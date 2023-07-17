@@ -10,7 +10,6 @@ public class NewAI : MonoBehaviour
     public int waypointIndex;
     Vector3 target;
     private bool caughtPlayer;
-    
 
 
     [Header("Searching")]
@@ -18,10 +17,10 @@ public class NewAI : MonoBehaviour
     [SerializeField] private float searchTimer;
     [SerializeField] private float lookRadiusY = -90;
 
-    [SerializeField] private float attackInterval = 2;
+    [SerializeField] private float attackInterval = 0.5f;
     [SerializeField] private float attackTimer;
     private Animator anim;
-
+    
 
     public void DisableRobot()
     {
@@ -95,10 +94,11 @@ public class NewAI : MonoBehaviour
 
     }
 
-    private void Die()
+    public void Die()
     {
         anim.enabled = false;
         enabled = false;
+
     }
 
     private void Attack()
@@ -111,7 +111,7 @@ public class NewAI : MonoBehaviour
         {
             anim.SetTrigger("onAttack");
             currentState = AIState.Patrolling;
-            
+            eVision.player.GetComponent<PlayerUnit>().Damaged(1);
 
         }
     }

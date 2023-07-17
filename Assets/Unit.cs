@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour, IDamagable
     public int health;
     public int Health { get; set; }
     public IDamagable.DamagableType Type { get; set; }
+    [SerializeField] private Unit[] otherUnits;
 
     [SerializeField] private NewAI newAI;
 
@@ -15,16 +16,22 @@ public class Unit : MonoBehaviour, IDamagable
     {
         Health = health;
         Type = IDamagable.DamagableType.ENEMY;
-        newAI = GetComponent<NewAI>();
+        
     }
 
 
     public void Damage()
     {
+
         health -= 1;
         if (health <= 0)
         {
-            newAI.currentState = NewAI.AIState.Dead;
+            newAI.Die();
+            foreach (Unit unit in otherUnits)
+            {
+                Destroy(unit);
+            }
+            
         }
 
     }
