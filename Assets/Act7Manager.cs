@@ -15,7 +15,7 @@ public class Act7Manager : MonoBehaviour
         deadEnemies += 1;
         if (deadEnemies >= 7)
         {
-            Debug.Log("All dead");
+            onDialogue.Raise(null, "They are all done...");
         }
     }
 

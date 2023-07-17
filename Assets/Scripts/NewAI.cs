@@ -10,6 +10,7 @@ public class NewAI : MonoBehaviour
     public int waypointIndex;
     Vector3 target;
     private bool caughtPlayer;
+    [SerializeField] private GameEvent enemyKilled;
 
 
     [Header("Searching")]
@@ -98,7 +99,7 @@ public class NewAI : MonoBehaviour
     {
         anim.enabled = false;
         enabled = false;
-
+        enemyKilled.Raise(this, null);
     }
 
     private void Attack()
