@@ -35,7 +35,7 @@ public class PlayerUnit : MonoBehaviour
     private void Update()
     {
         
-        if (transform.position.z < -50)
+        if (transform.position.y < -100)
         {
             GameManager.instance.ResetLevel();
         }
