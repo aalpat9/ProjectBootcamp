@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2234648e6cd4d6e4f879b137cb9dda10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPointPrefab: {fileID: 0}
+  healthPointPrefab: {fileID: 6195743069457762151, guid: 9ba023172518c1e4ca44da0fc0c9101d, type: 3}
 --- !u!135 &-573967358422612319
 SphereCollider:
   m_ObjectHideFlags: 0
