@@ -10,7 +10,12 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] string dialogue;
     public GameEvent onDialogue;
     [SerializeField] int doorId;
+    private AudioSource audioSource;
 
+    public void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void Interact(int id)
     {
         if (id == doorId)
@@ -29,7 +34,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         this.gameObject.GetComponent<MeshCollider>().enabled = false;
         this.gameObject.transform.DORotate(new Vector3(0, 180, 0), 1);
-        //ses burda oynar
+        audioSource.Play();
     }
 
 

@@ -5,13 +5,16 @@ using UnityEngine;
 public class Weapon : Grabbable
 {
 
-    
+    private AudioSource audioSource;
 
     public Weapon()
     {
         throwCoefficient = 10f;
     }
-
+    public void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public override void OnGrabbed()
     {
         base.OnGrabbed();
@@ -25,7 +28,7 @@ public class Weapon : Grabbable
     public override void Use()
     {
         playerController.playerAnim.SetTrigger("onAttack");
-        
+        audioSource.Play();
     }
 
     private void OnCollisionEnter(Collision collision)

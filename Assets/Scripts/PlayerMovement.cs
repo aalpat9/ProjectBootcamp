@@ -16,11 +16,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _rotSpeed = 360;
     private bool isSprinting = false;
     public bool lockMovement = false;
-
+   
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _anim = GetComponent<Animator>();
+     
     }
 
     public void LockMovement(bool toggle)
