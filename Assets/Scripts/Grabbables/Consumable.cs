@@ -8,7 +8,7 @@ public class Consumable : Grabbable
     public enum ConsumableType { Health, Energy };
     public ConsumableType type;
     public bool isDrink;
-    public float amount;
+    public float amount = 1;
 
     public Consumable()
     {
@@ -23,7 +23,7 @@ public class Consumable : Grabbable
         switch (type)
         {
             case ConsumableType.Health:
-                //Health doldur buraya
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUnit>().AddHealth(1);
                 if (isDrink)
                 {
                     base.playerController.playerAnim.SetTrigger("onDrink");
@@ -34,7 +34,7 @@ public class Consumable : Grabbable
                 }
                 break;
             case ConsumableType.Energy:
-                //Energy doldur buraya
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUnit>().AddHealth(1);
                 if (isDrink)
                 {
                     base.playerController.playerAnim.SetTrigger("onDrink");

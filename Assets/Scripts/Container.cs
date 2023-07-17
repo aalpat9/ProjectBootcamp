@@ -35,6 +35,7 @@ public class Container : MonoBehaviour, IDamagable
             
             Destroy(this.gameObject);
             SpawnItems();
+
             return;
         }
 
@@ -56,7 +57,7 @@ public class Container : MonoBehaviour, IDamagable
     {
         if (itemToSpawn != null)
         {
-            Instantiate(itemToSpawn);
+            Instantiate(itemToSpawn, this.transform.position, this.transform.rotation);
         }
        
     }
