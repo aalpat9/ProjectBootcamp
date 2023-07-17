@@ -31,4 +31,14 @@ public class PlayerUnit : MonoBehaviour
         HealthManager.instance.UpgradeHealthPoints();
     }
 
+
+    private void Update()
+    {
+        
+        if (transform.position.z < -50)
+        {
+            GameManager.instance.ResetLevel();
+        }
+
+    }
 }
