@@ -5,13 +5,16 @@ using UnityEngine;
 public class Axe : Grabbable
 {
 
-
+    private AudioSource audioSource;
 
     public Axe()
     {
         throwCoefficient = 10f;
     }
-
+    public void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public override void OnGrabbed()
     {
         base.OnGrabbed();
@@ -25,6 +28,7 @@ public class Axe : Grabbable
     public override void Use()
     {
         playerController.playerAnim.SetTrigger("onChop");
+        audioSource.Play();
 
     }
 

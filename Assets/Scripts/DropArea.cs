@@ -15,6 +15,12 @@ public class DropArea : MonoBehaviour
     public UnityEvent onDisappear;
     private bool isDropped;
     [SerializeField] private GameObject bone;
+    private AudioSource audioSource;
+
+    public void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -44,6 +50,7 @@ public class DropArea : MonoBehaviour
                 Vector3 meatPos = _droppedItem.transform.position;
                 Destroy(_droppedItem);
                 Instantiate(bone, meatPos, Quaternion.identity);
+                audioSource.Play();
             }
         }
     }
