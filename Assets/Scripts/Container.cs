@@ -32,7 +32,9 @@ public class Container : MonoBehaviour, IDamagable
 
         if(Health <= 0)
         {
+            
             Destroy(this.gameObject);
+            SpawnItems();
             return;
         }
 
@@ -48,7 +50,16 @@ public class Container : MonoBehaviour, IDamagable
         }
     }
 
+    [SerializeField] private GameObject itemToSpawn;
 
+    private void SpawnItems()
+    {
+        if (itemToSpawn != null)
+        {
+            Instantiate(itemToSpawn);
+        }
+       
+    }
 
     
 
