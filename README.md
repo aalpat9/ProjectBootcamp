@@ -44,6 +44,10 @@ The Warden, Tek kolu olan bir gardiyan, elinde sadece bir eşya taşıyarak (Kı
 - Aksiyon/Macera oyunu oyuncuları
 - Kaynak yönetimi oyunu oyuncuları
 
+## Jüriyeye Not
+
+Oyunun bootcamp sonunda belirli bir ücret karşılığı Steam'e yüklenmesi kararlaştırıldı.
+
 # Sprint 1
 Sprint içinde tamamlanması tahmin edilen puan: 80 Puan
 
