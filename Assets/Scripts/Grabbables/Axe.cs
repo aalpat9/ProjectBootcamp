@@ -28,7 +28,7 @@ public class Axe : Grabbable
     public override void Use()
     {
         playerController.playerAnim.SetTrigger("onChop");
-        audioSource.Play();
+        if (audioSource != null) { audioSource.Play(); }
 
     }
 

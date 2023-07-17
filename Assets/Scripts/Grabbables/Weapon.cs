@@ -28,7 +28,7 @@ public class Weapon : Grabbable
     public override void Use()
     {
         playerController.playerAnim.SetTrigger("onAttack");
-        audioSource.Play();
+        if (audioSource != null) { audioSource.Play(); }
     }
 
     private void OnCollisionEnter(Collision collision)
