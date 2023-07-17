@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         playerAnim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
-        trajectoryLine = GetComponent<LineRenderer>();
+        
     }
 
     float useDelay;
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         useDelay -= Time.deltaTime;
-        NewHandleThrowing();
+        HandleThrowing();
 
         HandleInteraction();
         HandleItemPickup();
@@ -51,145 +51,64 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //private void HandleThrowing()
-    //{
-    //    if (useDelay <= 0)
-    //    {
-    //        if (rightHand.childCount > 0)
-    //        {
-    //            if (Input.GetKeyDown(KeyCode.Space))
-    //            {
-    //                holdStartTime = Time.time;
-    //                playerAnim.SetBool("isThrowing", true);
-    //                Debug.Log("being pressed");
-    //            }
-
-    //            if (Input.GetKeyUp(KeyCode.Space))
-    //            {
-    //                float passedTime = Time.time - holdStartTime;
-
-    //                if (passedTime < delayForThrowing)
-    //                {
-    //                    playerAnim.SetBool("isThrowing", false);
-    //                    Drop();
-    //                }
-    //                else if (passedTime > delayForThrowing)
-    //                {
-    //                    playerAnim.SetBool("isThrowing", false);
-    //                    if (passedTime > 1f) passedTime = 1f;
-    //                    Throw(passedTime);
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
-
-    private bool isThrowing;
-    float throwDuration;
-    float maxThrowDuration = 1;
-    Vector3 throwDirection;
-    [SerializeField] LineRenderer trajectoryLine;
-    float throwForce = 10f;
-
-    private void NewHandleThrowing()
+    private void HandleThrowing()
     {
         if (useDelay <= 0)
         {
             if (rightHand.childCount > 0)
             {
-                // Check for throw input
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    StartThrow();
+                    holdStartTime = Time.time;
+                    playerAnim.SetBool("isThrowing", true);
+                    Debug.Log("being pressed");
                 }
-                else if (Input.GetKey(KeyCode.Space))
+
+                if (Input.GetKeyUp(KeyCode.Space))
                 {
-                    ContinueThrow();
-                }
-                else if (Input.GetKeyUp(KeyCode.Space))
-                {
-                    EndThrow();
+                    float passedTime = Time.time - holdStartTime;
+
+                    if (passedTime < delayForThrowing)
+                    {
+                        playerAnim.SetBool("isThrowing", false);
+                        Drop();
+                    }
+                    else if (passedTime > delayForThrowing)
+                    {
+                        playerAnim.SetBool("isThrowing", false);
+                        if (passedTime > 1f) passedTime = 1f;
+                        Throw(passedTime);
+                    }
                 }
             }
         }
-        if (isThrowing && trajectoryLine.enabled)
-        {
-            UpdateTrajectoryLinePositions();
-        }
     }
 
-    private void UpdateTrajectoryLinePositions()
+    private void Throw(float throwForce)
     {
-        // Update the starting position of the trajectory line
-        trajectoryLine.SetPosition(0, rightHand.position);
+        // Get the object to throw
+        Grabbable objectToThrow = rightHand.GetChild(0).GetComponent<Grabbable>();
+        Rigidbody throwableRb = objectToThrow.GetComponent<Rigidbody>();
 
-        // Update the ending position of the trajectory line based on the current throw distance
-        float throwDistance = throwDuration / maxThrowDuration * throwForce;
-        Vector3 lineEndPos = rightHand.position + throwDirection * throwDistance;
-        trajectoryLine.SetPosition(0, lineEndPos);
-    }
+        // Trigger OnDropped event
+        objectToThrow.OnDropped();
 
-    private void StartThrow()
-    {
+        // Remove playerController reference from the object
+        objectToThrow.playerController = null;
 
-        isThrowing = true;
-        throwDuration = 0;
-        throwDirection = transform.forward;
+        // Detach the object from the hand
+        objectToThrow.transform.SetParent(null);
+        EnableDisablePhysics(objectToThrow.gameObject, false);
 
-        trajectoryLine.enabled = true;
-        trajectoryLine.positionCount = 1;
-        UpdateTrajectoryLinePositions();
-    }
+        // Throw animation trigger
+        playerAnim.SetTrigger("onThrow");
 
-    private void ContinueThrow()
-    {
-        if (isThrowing)
-        {
-            throwDuration += Time.deltaTime;
-            float normalizedDuration = Mathf.Clamp01(throwDuration / maxThrowDuration);
-            float throwDistance = normalizedDuration * throwForce;
+        // Calculate the force to add (direction and magnitude)
+        Vector3 throwDirection = _rb.transform.forward;
+        Vector3 forceToAdd = throwDirection * throwForce * objectToThrow.throwCoefficient;
 
-            // Update the trajectory line position
-            Vector3 lineEndPosition = transform.position + throwDirection * throwDistance;
-            trajectoryLine.positionCount = 2;
-            trajectoryLine.SetPosition(1, lineEndPosition);
-        }
-    }
-    private void EndThrow()
-    {
-        if (isThrowing)
-        {
-            isThrowing = false;
-
-            // Disable the trajectory line
-            trajectoryLine.enabled = false;
-
-            // Get the object to throw
-            Grabbable objectToThrow = rightHand.GetChild(0).GetComponent<Grabbable>();
-            Rigidbody throwableRb = objectToThrow.GetComponent<Rigidbody>();
-
-            //OnDropped'i çağırır
-            rightHand.GetChild(0).GetComponent<Grabbable>().OnDropped();
-
-            //PlayerControlleri objeden al�r
-            rightHand.GetChild(0).GetComponent<Grabbable>().playerController = null;
-
-            //Elin childini birakir
-            var child = rightHand.GetChild(0);
-            child.transform.SetParent(null);
-            EnableDisablePhysics(child.gameObject, false);
-
-
-            // Throw animation trigger
-            playerAnim.SetTrigger("onThrow");
-
-            // Set force to add (direction and magnitude)
-            throwableRb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
-
-
-
-
-        }
+        // Apply the force to the throwable object
+        throwableRb.AddForce(forceToAdd, ForceMode.Impulse);
     }
 
 

@@ -19385,6 +19385,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8295607947077483184, guid: a60240d40e49ac444a18b829f902812e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1113241860}
+    - targetCorrespondingSourceObject: {fileID: 8295607947077483184, guid: a60240d40e49ac444a18b829f902812e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1113241861}
   m_SourcePrefab: {fileID: 100100000, guid: a60240d40e49ac444a18b829f902812e, type: 3}
 --- !u!1 &1113241852 stripped
 GameObject:
@@ -19509,6 +19512,19 @@ MonoBehaviour:
             m_StringArgument: What just happened?
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1113241861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113241852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c95c1aa7173e944871808d254ff9c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
 --- !u!1001 &1114785609
 PrefabInstance:
   m_ObjectHideFlags: 0
