@@ -9,6 +9,7 @@ public class Act7Manager : MonoBehaviour
     
     bool finished = false;
     private GameEvent onDialogue;
+    [SerializeField] private GameObject gameObject;
 
     public void incrementDeadEnemies()
     {
@@ -16,6 +17,7 @@ public class Act7Manager : MonoBehaviour
         if (deadEnemies >= 7)
         {
             onDialogue.Raise(null, "They are all done...");
+            gameObject.SetActive(true);
         }
     }
 
