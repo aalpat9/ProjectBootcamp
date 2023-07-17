@@ -1,5 +1,5 @@
 # Bootcamp-U32
-Bootcamp U32 Lone Arm: Odyssey
+Bootcamp U32 The Warden
 
 # **Takım İsmi**
 
@@ -16,15 +16,14 @@ Takım Unity U-32
 
 ## Oyun İsmi
 
---Lone Arm Odyssey--
+--The Warden--
 
 ## Product Backlog URL
 
 [Bootcamp U-32 Milanote Backlog](https://app.milanote.com/1Q7WPK1RVQEj9n?p=Chu4nYSduJe)
 
 ## Oyun Açıklaması
-
-Lone Arm Odyssey, Tek kolu olan bir savaşçı, elinde sadece bir eşya taşıyarak (Kılıç, fener, sandalye vs..)  zorlu odaların ve düşmanların üstesinden gelmeye çalışır. Kaçış süreci boyunca farklı düşman türleri görür, elindeki eşyaları geliştirebilir veya kırılmalarını önleyebilir. Çantası olmadığı için odaları ve odadaki eşyaları yöneterek, farklı stratejilerle düşmanlarını alt etmek zorunda kalır. Gizliliği kullanarak isteğe bağlı olarak bazı durumların altından kalkar. Bölümleri geçerek şatodan kaçmaya çalışır.
+The Warden, Tek kolu olan bir gardiyan, elinde sadece bir eşya taşıyarak (Kılıç, fener, sandalye vs..) odaların kontrolünü sağlar ve gelişen olayların üstesinden gelmeye çalışır. Gardiyanlığı boyunca farklı düşman türleri görür, elindeki eşyaları geliştirebilir veya kırılmalarını önleyebilir. Çantası olmadığı için odaları ve odadaki eşyaları yöneterek, farklı stratejilerle düşmanlarını alt etmek zorunda kalır. Gizliliği kullanarak isteğe bağlı olarak bazı durumların altından kalkar. Bölümleri geçerek canavarı alt etmeye çalışır.
 
 
 ## Oyun Özellikleri 
