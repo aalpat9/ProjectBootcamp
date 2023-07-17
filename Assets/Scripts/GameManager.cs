@@ -59,7 +59,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-
+    private void Update()
+    {
+        if (this.transform.position.z < -60)
+        {
+            ResetLevel();
+        }
+    }
 }
 
 

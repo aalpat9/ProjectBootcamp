@@ -17243,6 +17243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  maxHealth: 5
 --- !u!1001 &1113612757
 PrefabInstance:
   m_ObjectHideFlags: 0
