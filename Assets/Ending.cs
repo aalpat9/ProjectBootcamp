@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Ending : MonoBehaviour
 {
@@ -28,7 +29,9 @@ public class Ending : MonoBehaviour
             .AppendCallback(() => { theEnd.gameObject.SetActive(true); })
             .Append(backing.DOColor(colora, 2))
             .AppendInterval(2)
-            .AppendCallback(() => { atLeast.gameObject.SetActive(true); });
+            .AppendCallback(() => { atLeast.gameObject.SetActive(true); })
+            .AppendInterval(2)
+            .AppendCallback(() => { SceneManager.LoadScene("menu"); });
             
         
 
