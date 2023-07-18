@@ -8,7 +8,7 @@ public class Act7Manager : MonoBehaviour
     public int deadEnemies = 0;
     
     bool finished = false;
-    private GameEvent onDialogue;
+    [SerializeField] private GameEvent onDialogue;
     [SerializeField] private GameObject gameObject;
 
     public void incrementDeadEnemies()
