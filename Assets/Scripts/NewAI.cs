@@ -99,7 +99,10 @@ public class NewAI : MonoBehaviour
     {
         anim.enabled = false;
         enabled = false;
-        enemyKilled.Raise(this, null);
+        if (enemyKilled != null)
+        {
+            enemyKilled.Raise(this, null);
+        }
     }
 
     private void Attack()
