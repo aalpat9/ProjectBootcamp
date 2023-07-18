@@ -2262,7 +2262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8104700233496338145, guid: 001a4e68ceeb3264495c8414b75f2920, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19724,7 +19724,6 @@ MonoBehaviour:
   dialogue: I need my key.
   onDialogue: {fileID: 11400000, guid: 0389b1a41cf235748ad9720ba1a3f9fb, type: 2}
   doorId: 1
-  audioSource: {fileID: 0}
 --- !u!135 &1015349621
 SphereCollider:
   m_ObjectHideFlags: 0
