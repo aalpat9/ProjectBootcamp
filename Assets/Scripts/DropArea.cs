@@ -50,7 +50,7 @@ public class DropArea : MonoBehaviour
                 Vector3 meatPos = _droppedItem.transform.position;
                 Destroy(_droppedItem);
                 Instantiate(bone, meatPos, Quaternion.identity);
-                audioSource.Play();
+                if (audioSource != null) { audioSource.Play(); }
             }
         }
     }
