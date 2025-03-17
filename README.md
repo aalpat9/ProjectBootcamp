@@ -9,9 +9,8 @@ Takım Unity U-32
 
 ## Takım Elemanları
 - Arda Alpat: Product Owner / Game Developer
-- Esra Yıldırım: Scrum Master / Game Developer
-- Oğuzhan Deniz: Game Developer
 - Süleyman Batuhan Şencan: Game Developer / Level Designer
+- Esra Yıldırım: Scrum Master / Game Developer
 - Esra Mermer: Art Director
 
 ## Oyun İsmi
